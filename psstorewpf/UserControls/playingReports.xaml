@@ -1,0 +1,138 @@
+﻿<UserControl
+    x:Class="psstorewpf.UserControls.playingReports"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:psstorewpf"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="800"
+    Height="550"
+    FlowDirection="RightToLeft"
+    KeyDown="MetroWindow_KeyDown"
+    Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"  Margin="30,12,30,12" Grid.Row="0">
+            <Label
+            x:Name="label4"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="30,0,20,0"
+            Content="تاريخ البدايه" />
+            <mah:DateTimePicker
+            x:Name="startDate"
+            Width="161"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FlowDirection="LeftToRight"
+            IsEnabled="False" />
+            <Label
+            x:Name="label3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="30,0,20,0"
+            Content="تاريخ النهاية" />
+            <mah:DateTimePicker
+            x:Name="endDate"
+            Width="161"
+            Margin="30,0,20,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FlowDirection="LeftToRight"
+            IsEnabled="False" />
+
+            <Button
+            x:Name="searchButton"
+            Width="86"
+            Height="26"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="searchButton_Click"
+            Content="بحث" />
+        </StackPanel>
+        <DataGrid Grid.Row="1"
+            x:Name="Imported"
+            Height="351"
+            VerticalAlignment="Top"
+            AutoGenerateColumns="False"
+            CanUserResizeColumns="True"
+            IsReadOnly="True"
+            ItemsSource="{Binding Source=listOfInvoices}">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding device_name}"
+                    Header="اسم الجهاز" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding formattedStartTime}"
+                    Header="وقت البدء" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding formattedEndTime}"
+                    Header="وقت الانتهاء" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding duration}"
+                    Header="المده" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding type}"
+                    Header="نوع اللعب" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding pricePerHour}"
+                    Header="سعر الساعه" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding playCost}"
+                    Header="التكلفة" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding paid}"
+                    Header="المدفوع" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"  Grid.Row="2">
+
+            <Label
+            x:Name="label2"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="0,0,20,0"
+            Content="عدد الساعات:"
+            FontSize="20"
+            FontWeight="Bold" />
+            <Label
+            x:Name="totalDurationLabel"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="00:00"
+            FontSize="20"
+            FontWeight="Bold" />
+            <Label
+            x:Name="label"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="100,0,10,0"
+            Content="المجموع:"
+            FontSize="20"
+            FontWeight="Bold" />
+            <Label
+            x:Name="totalLabel"
+            Margin="20,0,70,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="0.00"
+            FontSize="20"
+            FontWeight="Bold" />
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>

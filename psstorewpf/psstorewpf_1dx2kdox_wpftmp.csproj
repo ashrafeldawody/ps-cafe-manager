@@ -1,0 +1,240 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net461</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>ps4.ico</ApplicationIcon>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningLevel>3</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Classes\CafeInvoice.cs~RF40778b59.TMP" />
+    <None Remove="video-game-console-with-gamepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.7" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.9.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.13.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.13.1" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.13.1" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="addDevice.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="editProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="controllersReports.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="addProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\DevicesUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\expensesReports.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\cafeReports.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="controlPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\products.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="timeEndWarning.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="withdraw.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Ashraf Eldawody\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/snappy64.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="C:\Users\Ashraf Eldawody\.nuget\packages\mongodb.driver.core\2.13.1\build\../runtimes/win/native/snappy32.dll" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\controlzex\4.4.0\lib\net45\ControlzEx.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\dnsclient\1.4.0\lib\net45\DnsClient.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro\2.4.7\lib\net46\MahApps.Metro.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.BootstrapIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.BoxIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Codicons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Coolicons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Core.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Entypo.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.EvaIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.FeatherIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.FileIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Fontaudio.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.FontAwesome.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Fontisto.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.ForkAwesome.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Ionicons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.JamIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Material.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.MaterialDesign.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.MaterialLight.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Microns.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Modern.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Octicons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.PicolIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.PixelartIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.RadixIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.RemixIcon.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.RPGAwesome.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.SimpleIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Typicons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Unicons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.VaadinIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.WeatherIcons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mahapps.metro.iconpacks\4.9.0\lib\net46\MahApps.Metro.IconPacks.Zondicons.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mongodb.bson\2.13.1\lib\net452\MongoDB.Bson.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mongodb.driver.core\2.13.1\lib\net452\MongoDB.Driver.Core.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mongodb.driver\2.13.1\lib\net452\MongoDB.Driver.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\mongodb.libmongocrypt\1.2.2\lib\net452\MongoDB.Libmongocrypt.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\sharpcompress\0.23.0\lib\net45\SharpCompress.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.buffers\4.5.1\ref\net45\System.Buffers.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.ComponentModel.DataAnnotations.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Configuration.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.drawing.common\5.0.2\ref\net461\System.Drawing.Common.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Drawing.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.IO.Compression.FileSystem.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.net.http\4.3.4\ref\net46\System.Net.Http.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Numerics.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Printing.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0\ref\net461\System.Runtime.CompilerServices.Unsafe.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.runtime.interopservices.runtimeinformation\4.3.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.security.cryptography.algorithms\4.3.0\ref\net461\System.Security.Cryptography.Algorithms.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.security.cryptography.encoding\4.3.0\ref\net46\System.Security.Cryptography.Encoding.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.security.cryptography.primitives\4.3.0\ref\net46\System.Security.Cryptography.Primitives.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.security.cryptography.x509certificates\4.3.0\ref\net461\System.Security.Cryptography.X509Certificates.dll" />
+    <ReferencePath Include="C:\Users\Eldawody\.nuget\packages\system.valuetuple\4.5.0\ref\net461\System.ValueTuple.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Windows.Controls.Ribbon.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\UIAutomationClient.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\UIAutomationClientsideProviders.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\UIAutomationProvider.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\UIAutomationTypes.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\WindowsBase.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.Concurrent.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.Annotations.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.EventBasedAsync.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Contracts.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Debug.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tools.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tracing.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Dynamic.Runtime.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Globalization.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.IO.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Expressions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Parallel.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Queryable.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.NetworkInformation.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.Requests.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Net.WebHeaderCollection.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ObjectModel.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.ILGeneration.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Emit.Lightweight.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Resources.ResourceManager.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Handles.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Numerics.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Json.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Serialization.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Security.Principal.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Duplex.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Http.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.NetTcp.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Primitives.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ServiceModel.Security.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.Extensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.RegularExpressions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.Parallel.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Timer.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.ReaderWriter.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XDocument.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XmlSerializer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\addDevice.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\addProduct.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\controllersReports.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\controlPanel.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\editProduct.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\MainWindow.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\pos.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\prompt.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\receipt.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\TimeEndWarning.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\UserControls\cafeReports.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\UserControls\DevicesUC.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\UserControls\expensesReports.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\UserControls\playingReports.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\UserControls\products.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\UserControls\psdevice.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\withdraw.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\App.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\psstorewpf_Content.g.cs" />
+    <Compile Include="E:\psstorewpf\psstorewpf\obj\Debug\net461\GeneratedInternalTypeHelper.g.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,52 @@
+﻿<mah:MetroWindow
+    x:Class="psstorewpf.controlPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UserControls="clr-namespace:psstorewpf.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:psstorewpf"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="التقارير"
+    Width="1000"
+    Height="700"
+    BorderBrush="#FF1A1515"
+    BorderThickness="2,2,2,2"
+    FlowDirection="RightToLeft"
+    ResizeMode="NoResize"
+    ShowInTaskbar="False"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Normal"
+    mc:Ignorable="d">
+    <Grid>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,0.4,0.2" TabStripPlacement="Left">
+            <TabItem Header="تقارير اللعب">
+                <DockPanel>
+                    <UserControls:playingReports DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="7,-9,6.6,0.2" Height="636"/>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="تقارير الكافية">
+                <DockPanel>
+                <UserControls:cafeReports DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="7,-9,6.6,0.2" Height="636"/>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="تقارير السحب">
+                <DockPanel>
+                    <UserControls:expensesReports DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="7,-9,6.6,0.2" Height="636"/>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="الأجهزه">
+                <DockPanel>
+                    <UserControls:DevicesUC DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="7,-9,6.6,0.2" Height="636"/>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="الكافيه">
+                <DockPanel>
+                    <UserControls:ProductsUC DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="7,-9,6.6,0.2" Height="636"/>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</mah:MetroWindow>

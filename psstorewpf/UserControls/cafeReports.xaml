@@ -1,0 +1,108 @@
+﻿<UserControl
+    x:Class="psstorewpf.UserControls.cafeReports"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:local="clr-namespace:psstorewpf.UserControls"
+    Width="800"
+    Height="550"
+    Background="White"
+    FlowDirection="RightToLeft"
+    KeyDown="MetroWindow_KeyDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"  Margin="30,12,30,12" Grid.Row="0">
+            <Label
+            x:Name="label4"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="30,0,20,0"
+            Content="تاريخ البدايه" />
+            <mah:DateTimePicker
+            x:Name="startDate"
+            Width="161"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FlowDirection="LeftToRight"
+            IsEnabled="False" />
+            <Label
+            x:Name="label3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="30,0,20,0"
+            Content="تاريخ النهاية" />
+            <mah:DateTimePicker
+            x:Name="endDate"
+            Width="161"
+            Margin="30,0,20,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            FlowDirection="LeftToRight"
+            IsEnabled="False" />
+
+            <Button
+            x:Name="searchButton"
+            Width="86"
+            Height="26"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="searchButton_Click"
+            Content="بحث" />
+            </StackPanel>
+            <DataGrid  Grid.Row="1"
+            x:Name="Imported"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            AutoGenerateColumns="False"
+            CanUserResizeColumns="True"
+            IsReadOnly="True"
+            ItemsSource="{Binding Source=listOfInvoices}"
+            SelectionMode="Single" Margin="0,10,-0.2,0.2">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Width="1*"
+                    Binding="{Binding device_name}"
+                    Header="اسم الجهاز" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding formattedDateTime}"
+                    Header="التاريخ" />
+                <DataGridTextColumn
+                    Width="2*"
+                    Binding="{Binding readableItems}"
+                    Header="التفاصيل" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding cafeCost}"
+                    Header="التكلفة" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"  Grid.Row="2">
+            <Label
+            Margin="0,0,50,0"
+            Content="المجموع"
+            FontSize="20"
+            FontWeight="Bold" />
+            <Label
+            x:Name="totalLabel"
+            HorizontalAlignment="Left"
+            Margin="0,0,50,0"
+            VerticalAlignment="Top"
+            Content="0.00"
+            FontSize="20"
+            FontWeight="Bold"
+            RenderTransformOrigin="0.567,0.919" />
+            <Label
+            Margin="0,0,50,0"
+            Content="جنيه"
+            FontSize="20"
+            FontWeight="Bold" />
+            </StackPanel>
+    </Grid>
+</UserControl>

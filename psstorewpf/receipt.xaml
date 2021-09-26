@@ -1,0 +1,21 @@
+﻿<Window x:Class="psstorewpf.receipt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:psstorewpf"
+        mc:Ignorable="d"
+        Title="receipt" Height="450" Width="800">
+    <Grid>
+        <ItemsControl ItemsSource="{Binding ReceiptItems}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock 
+                Text="{Binding Content}" 
+                Foreground="{Binding IsHighlighted, Converter={StaticResource MyColorFromBooleanConverter}}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+    </Grid>
+</Window>

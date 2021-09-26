@@ -1,0 +1,110 @@
+﻿<UserControl
+    x:Class="psstorewpf.UserControls.ProductsUC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:psstorewpf"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="800"
+    Height="550"
+    Background="White"
+    FlowDirection="RightToLeft">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <StackPanel
+            Grid.Row="0"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            <Button
+                x:Name="addProduct"
+                Width="75"
+                Margin="10,10,10,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="addProduct_Click"
+                Content="اضافة منتج" />
+            <Button
+                x:Name="removeSelected"
+                Width="97"
+                Margin="10,10,10,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="removeSelected_Click"
+                Content="حذف المنتج المحدد" />
+            <Button
+                x:Name="refreshProductsList"
+                Width="97"
+                Margin="10,10,10,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="refreshProductsList_Click"
+                Content="تحديث المنتجات" />
+            <Button
+                x:Name="updateProduct"
+                Width="97"
+                Margin="10,10,10,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="updateProduct_Click"
+                Content="تحديث المنتج المحدد" />
+        </StackPanel>
+        <DataGrid
+            x:Name="ProductsDataGrid"
+            Grid.Row="1"
+            HorizontalAlignment="Stretch"
+            AutoGenerateColumns="False"
+            CanUserResizeColumns="True"
+            IsReadOnly="True"
+            ItemsSource="{Binding Source=items}"
+            SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Width="3*"
+                    Binding="{Binding name}"
+                    Header="المنتج" />
+                <DataGridTextColumn
+                    Width="1*"
+                    Binding="{Binding price}"
+                    Header="السعر" />
+                <DataGridTextColumn
+                    Width="1*"
+                    Binding="{Binding qty}"
+                    Header="الكمية" />
+                <DataGridTextColumn
+                    Width="1*"
+                    Binding="{Binding totalPrice}"
+                    Header="سعر الكميه" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel
+            Grid.Row="2"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            <Label
+                Margin="30,0,30,0"
+                FontFamily="MCS PEN"
+                FontSize="20">
+                السعر
+            </Label>
+            <Label
+                x:Name="totalLabel"
+                Margin="30,0,30,0"
+                FontFamily="MCS PEN"
+                FontSize="20">
+                0.00
+            </Label>
+            <Label
+                Margin="30,0,30,0"
+                FontFamily="MCS PEN"
+                FontSize="20">
+                جنيه
+            </Label>
+        </StackPanel>
+    </Grid>
+</UserControl>

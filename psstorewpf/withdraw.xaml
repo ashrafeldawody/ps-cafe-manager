@@ -1,0 +1,71 @@
+﻿<mah:MetroWindow
+    x:Class="psstorewpf.withdraw"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:psstorewpf"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="تأكيد"
+    Width="320"
+    Height="280"
+    BorderBrush="#FF1A1515"
+    BorderThickness="2,2,2,2"
+    FlowDirection="RightToLeft"
+    ResizeMode="NoResize"
+    ShowInTaskbar="False"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Normal"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <StackPanel Margin="7,7,7,7">
+
+        <TextBlock Height="21" Margin="7,7,7,7">
+            <Run FlowDirection="RightToLeft" Text="برجاء " />
+            <Run
+                FlowDirection="RightToLeft"
+                Language="ar-eg"
+                Text="ادخال تفاصيل العملية والقيمه" />
+        </TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <Label Width="80" Content="نوع العمليه  " />
+            <DockPanel Width="226">
+                <ComboBox
+                    x:Name="TypeTextBox"
+                    Height="19"
+                    Margin="7,7,7,7">
+                    <ComboBoxItem>بضاعة كافيه</ComboBoxItem>
+                    <ComboBoxItem>تكاليف صيانه</ComboBoxItem>
+                    <ComboBoxItem>مرتب</ComboBoxItem>
+                </ComboBox>
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Width="80" Content="سبب السحب" />
+            <DockPanel Width="225">
+                <TextBox
+                    x:Name="ReasonTextBox"
+                    Height="62"
+                    Margin="7,7,7,7" />
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Width="80" Content="القيمه" />
+            <DockPanel Width="217">
+                <TextBox
+                    x:Name="AmountTextBox"
+                    Height="20"
+                    Margin="7,7,7,7" />
+            </DockPanel>
+        </StackPanel>
+        <Button
+            Margin="7,7,7,7"
+            Click="OKButton_Click"
+            Content="تنفيذ" />
+        <Button
+            Margin="7,7,7,7"
+            Click="Cancel_Click"
+            Content="إغلاق" />
+    </StackPanel>
+
+</mah:MetroWindow>

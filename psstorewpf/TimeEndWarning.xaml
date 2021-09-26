@@ -1,0 +1,60 @@
+﻿<mah:MetroWindow
+    x:Class="psstorewpf.TimeEndWarning"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:psstorewpf"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="تأكيد"
+    Width="350"
+    Height="250"
+    BorderBrush="#FF1A1515"
+    BorderThickness="2,2,2,2"
+    FlowDirection="RightToLeft"
+    ResizeMode="NoResize"
+    ShowInTaskbar="False"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Normal"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <StackPanel Margin="7,7,7,7">
+        <TextBlock
+            x:Name="title"
+            Height="52"
+            Margin="7,7,7,7"
+            FontSize="18"
+            FontWeight="Bold" />
+        <ComboBox
+            x:Name="timeCombo"
+            Width="198"
+            Height="25">
+            <ComboBoxItem Content="00:30" Selector.IsSelected="True" />
+            <ComboBoxItem Content="01:00" />
+            <ComboBoxItem Content="01:30" />
+            <ComboBoxItem Content="02:00" />
+            <ComboBoxItem Content="02:30" />
+            <ComboBoxItem Content="03:00" />
+            <ComboBoxItem Content="03:30" />
+            <ComboBoxItem Content="04:00" />
+            <ComboBoxItem Content="04:30" />
+            <ComboBoxItem Content="05:00" />
+            <ComboBoxItem Content="05:30" />
+        </ComboBox>
+        <Button
+            Height="51"
+            Margin="7,7,6.8,7"
+            Click="OKButton_Click"
+            Content="اضافة وقت"
+            FontSize="24"
+            FontWeight="Bold" />
+        <Button
+            Height="49"
+            Margin="7,7,6.8,7"
+            Click="Button_Click"
+            Content="اغلاق ودفع"
+            FontSize="24"
+            FontWeight="Bold" />
+    </StackPanel>
+
+</mah:MetroWindow>

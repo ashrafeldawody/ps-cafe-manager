@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>E:\psstorewpf\psstorewpf\Properties\PublishProfiles\FolderProfile2.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="UserControls\playingReports.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pos.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="prompt.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="receipt.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\psdevice.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="addDevice.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="editProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\DevicesUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\expensesReports.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\cafeReports.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="controlPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\products.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\playingReports.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="pos.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="controllersReports.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="addProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TimeEndWarning.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="receipt.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="withdraw.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="prompt.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\psdevice.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

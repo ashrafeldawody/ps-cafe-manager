@@ -1,0 +1,74 @@
+﻿<mah:MetroWindow
+    x:Class="psstorewpf.addProduct"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:psstorewpf"
+    xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="تأكيد"
+    Width="320"
+    Height="230"
+    BorderBrush="#FF1A1515"
+    BorderThickness="2,2,2,2"
+    Closed="Window_Closed"
+    FlowDirection="RightToLeft"
+    ResizeMode="NoResize"
+    ShowInTaskbar="False"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Normal"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <StackPanel Margin="7,7,7,7">
+
+        <TextBlock Height="21" Margin="7,7,7,7">
+            ادخل تفاصيل المنتج
+        </TextBlock>
+        <StackPanel Margin="3,3,3,3" Orientation="Horizontal">
+            <Label Width="80" Content="اسم المنتج" />
+            <DockPanel Width="217">
+                <TextBox x:Name="productName" Margin="7,7,7,7" />
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Margin="3,3,3,3" Orientation="Horizontal">
+            <Label Width="80" Content="السعر" />
+            <DockPanel Width="217">
+                <mah:NumericUpDown
+                    x:Name="productPrice"
+                    Width="200"
+                    HideUpDownButtons="True"
+                    Interval="1"
+                    Maximum="50"
+                    Minimum="0.5"
+                    StringFormat="C2" />
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Margin="3,3,3,3" Orientation="Horizontal">
+            <Label Width="80" Content="الكمية" />
+            <DockPanel Width="217">
+                <mah:NumericUpDown
+                    x:Name="productQty"
+                    Width="200"
+                    HideUpDownButtons="True"
+                    Interval="1"
+                    Maximum="200"
+                    Value="-1" />
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button
+                Width="120"
+                Height="30"
+                Margin="7,7,30,7"
+                Click="OKButton_Click"
+                Content="اضافة" />
+            <Button
+                Width="120"
+                Height="30"
+                Margin="7,7,7.4,7"
+                Click="Cancel_Click"
+                Content="إغلاق" />
+        </StackPanel>
+    </StackPanel>
+
+</mah:MetroWindow>

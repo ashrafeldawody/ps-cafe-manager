@@ -1,0 +1,28 @@
+﻿<mah:MetroWindow x:Class="psstorewpf.controllersReports"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:psstorewpf"
+        mc:Ignorable="d"
+        Title="تأكيد" Height="350" Width="500" BorderBrush="#FF1A1515" BorderThickness="2,2,2,2" FlowDirection="RightToLeft" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ResizeMode="NoResize" WindowState="Normal" WindowStyle="None">
+    <StackPanel Margin="7,7,7,7">
+        <TextBlock Height="52" Margin="7,7,7,7" FontWeight="Bold" FontSize="18" ><Run FlowDirection="RightToLeft" Text="تفاصيل العطل"/></TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="رقم الدراع" Width="89"/>
+            <DockPanel Width="392">
+                <TextBox Width="386" x:Name="ControllerNumberTextBox"></TextBox>
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="تفاصيل العطل" Width="83"/>
+            <DockPanel Width="396">
+                <TextBox x:Name="ComplainTextBox" Margin="7,7,7,7" Height="62"></TextBox>
+            </DockPanel>
+        </StackPanel>
+        <Button Content="تسجيل" Margin="7,7,7.4,7" Click="OKButton_Click" Height="45" FontWeight="Bold" FontSize="24" />
+        <Button Content="إغلاق" Margin="7,7,7.4,7" Height="48" FontWeight="Bold" FontSize="24" Click="Button_Click" />
+    </StackPanel>
+
+</mah:MetroWindow>
